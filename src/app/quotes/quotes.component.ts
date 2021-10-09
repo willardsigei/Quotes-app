@@ -8,9 +8,12 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
   quotes: Quotes[]=[
-    new Quotes('lorem','coding','building an application using angular'),
-    new Quotes('lorem','xxxxx', 'i will be reading a book called everything is fucked up'),
-    new Quotes('lorem', 'xxxxxxxx','playing pool games and cards')
+
+    new Quotes('Albert','Education','“Try not to become a man of success, but rather try to become a man of value.”',0,0,'Willard'),
+    new Quotes('Albert','Education','“Try not to become a man of success, but rather try to become a man of value.”',0,0,'Willard'),
+    new Quotes('Albert','Education','“Try not to become a man of success, but rather try to become a man of value.”',0,0,'Willard'),
+    new Quotes('Albert','Education','“Try not to become a man of success, but rather try to become a man of value.”',0,0,'Willard'),
+
   ]
  
 

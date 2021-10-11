@@ -32,11 +32,11 @@ export class QuotesComponent implements OnInit {
     this.quotes.unshift(quote)
   }
   upVote(quote:any){
-    quote.upvotes= quote.upvotes+1;
+    quote.upvote= quote.upvote+1;
     console.log('quote.upvote')
   }
   downVote(quote:any){
-    quote.downvotes = quote.downvotes+1;
+    quote.downvote = quote.downvote+1;
   }
 
  

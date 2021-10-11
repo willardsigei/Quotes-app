@@ -16,34 +16,34 @@
             </div>
             <div class="modal-body">
 
-                <form (ngSubmit)='submitQuote' #goalForm='ngForm'>
+                <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
                     <div class="form-group">
                         <label for="author">Author</label>
-                        <input [(ngModel)]="newQuote.author" type="text" class="form-control" id="author" name="author" required>
-                        <div class="alert alert-danger">
+                        <input [(ngModel)]="newQuote.author" type="text" class="form-control" id="author" name="author" #author='ngModel' required>
+                        <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
                             <p>Author is required</p>
                         </div>
                     </div>
                     <div class="form-group">
 
-                        <label for="name">Title</label>
-                        <input [(ngModel)]="newQuote.title" type="text" class="form-control" id="title" name="title" required>
-                        <div class="alert alert-danger">
+                        <label for="title">Title</label>
+                        <input [(ngModel)]="newQuote.title" type="text" class="form-control" id="title" name="title" #title='ngModel' required>
+                        <div [hidden]="title.valid || title.pristine" class="alert alert-danger">
                             <p>Title is required</p>
                         </div>
                     </div>
                     <div class="form-group">
 
                         <label for="quote">Quote</label>
-                        <textarea [(ngModel)]="newQuote.quote" class="form-control" id="quote" rows="4" name="quote" required></textarea>
-                        <div class="alert alert-danger">
+                        <textarea [(ngModel)]="newQuote.quote" class="form-control" id="quote" rows="4" name="quote" #quote='ngModel' required></textarea>
+                        <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
                             <p>Quote is required</p>
                         </div>
                     </div>
                     <div class="form-group">
 
                         <label for="publisher">Publisher</label>
-                        <textarea [(ngModel)]="newQuote.submitedBy" class="form-control" id="publisher" rows="4" name="publisher" required></textarea>
+                        <textarea [(ngModel)]="newQuote.submitedBy" class="form-control" id="publisher" rows="4" name="publisher" #publisher='ngModel' required></textarea>
                         <div class="alert alert-danger">
                             <p>Publisher is required</p>
                         </div>
@@ -51,7 +51,7 @@
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save Quote</button>
+                        <button type="submit" class="btn btn-primary">Save Quote</button>
                     </div>
                 </form>
 

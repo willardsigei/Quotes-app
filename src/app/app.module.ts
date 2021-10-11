@@ -17,7 +17,7 @@ import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
   ],
   imports: [
     NgProgressModule.forRoot(),
-    NgProgressHttpClientModule
+    NgProgressHttpClientModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

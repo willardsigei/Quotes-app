@@ -6,7 +6,8 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { CreateQuoteComponent } from './create-quote/create-quote.component';
 import { FormsModule} from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
-
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     CreateQuoteComponent,
   ],
   imports: [
+    NgProgressModule.forRoot(),
+    NgProgressHttpClientModule
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
